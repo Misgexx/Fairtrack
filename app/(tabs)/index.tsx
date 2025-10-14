@@ -1,3 +1,4 @@
+// app/(tabs)/index.tsx
 import { Ionicons } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import React from 'react';
@@ -17,15 +18,18 @@ export default function HomeScreen() {
       <View style={styles.topBar}>
         <Text style={styles.brand}>FairTrack</Text>
 
-        {/* Settings/Profile icon (no action yet) */}
-        <TouchableOpacity
-          onPress={() => {}}
-          accessibilityRole="button"
-          accessibilityLabel="Settings"
-          hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-        >
-          <Ionicons name="settings-outline" size={22} color="#222" />
-        </TouchableOpacity>
+        {/* Settings button → /settings (pulled inward) */}
+        <Link href="/settings" asChild>
+          <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityLabel="Settings"
+            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+            style={styles.settingsBtn}
+            activeOpacity={0.85}
+          >
+            <Ionicons name="settings-outline" size={22} color="#222" />
+          </TouchableOpacity>
+        </Link>
       </View>
 
       {/* Center content */}
@@ -33,14 +37,14 @@ export default function HomeScreen() {
         <Text style={styles.headline}>Keep track of companies</Text>
 
         <Link href="/explore" asChild>
-          <TouchableOpacity style={styles.exploreBtn}>
+          <TouchableOpacity style={styles.exploreBtn} activeOpacity={0.85}>
             <Text style={styles.exploreText}>Explore</Text>
           </TouchableOpacity>
         </Link>
       </View>
 
-      {/* Floating + button (routes to /company for now) */}
-      <Link href="/company" asChild>
+      {/* Floating + button → new company */}
+      <Link href="/new-company" asChild>
         <TouchableOpacity style={styles.fab} activeOpacity={0.85}>
           <Ionicons name="add" size={28} color="#fff" />
         </TouchableOpacity>
@@ -53,19 +57,26 @@ const styles = StyleSheet.create({
   safe: {
     flex: 1,
     backgroundColor: '#f8f9fa',
-    paddingHorizontal: 20, // more left/right space
-    paddingTop: Platform.select({ ios: 40, android: 32 }), // more top space
+    paddingTop: Platform.select({ ios: 40, android: 32 }),
+    // keep a comfortable default padding but we'll add a bit more on the header itself
+    paddingHorizontal: 16,
   },
   topBar: {
     height: 50,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    // 👇 extra horizontal padding so items aren’t at the edges
+    paddingHorizontal: 8,
   },
   brand: {
     fontSize: 22,
     fontWeight: '800',
     letterSpacing: 0.2,
+  },
+  // 👇 small inset from the right edge
+  settingsBtn: {
+    marginRight: 6,
   },
   centerWrap: {
     flex: 1,
@@ -93,16 +104,16 @@ const styles = StyleSheet.create({
   },
   fab: {
     position: 'absolute',
-    right: 25,  // pulled in from the edge
-    bottom: 35, // lifted up a bit
+    right: 25,
+    bottom: 35,
     width: 56,
     height: 56,
     borderRadius: 28,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#2f80ed',
-    elevation: 3, // Android shadow
-    shadowColor: '#000', // iOS shadow
+    elevation: 3,
+    shadowColor: '#000',
     shadowOpacity: 0.2,
     shadowRadius: 6,
     shadowOffset: { width: 0, height: 3 },
