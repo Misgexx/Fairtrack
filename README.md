@@ -1,50 +1,109 @@
-# Welcome to your Expo app 👋
+FairTrack – Career Fair Companion App
+<img width="1290" height="2796" alt="IMG_5069" src="https://github.com/user-attachments/assets/c3f27f36-e4e0-4d3a-a70c-b7e103b27102" />
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+FairTrack is a mobile app built to help students stay organized during career fairs. Instead of juggling business cards, messy notes, and scattered follow-ups, FairTrack puts everything in one place. It makes the career fair experience simple, fast, and stress-free.
 
-## Get started
+🚀 What the App Does
 
-1. Install dependencies
+FairTrack helps you:
 
-   ```bash
-   npm install
-   ```
+Scan recruiter QR badges to instantly save their info
 
-2. Start the app
+Add notes about conversations you had
 
-   ```bash
-   npx expo start
-   ```
+Track companies, roles, and who you talked to
 
-In the output, you'll find options to open the app in a
+Set reminders for follow-up emails
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Keep everything in one clean dashboard
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The goal is simple:
+No more forgetting recruiters, losing notes, or missing follow-ups.
 
-## Get a fresh project
+🧠 Why I Built It
 
-When you're ready, run:
+As a student attending multiple career fairs, I realized:
 
-```bash
-npm run reset-project
-```
+It’s hard to remember each recruiter
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Everyone hands out the same flyers
 
-## Learn more
+Follow-up emails get messy
 
-To learn more about developing your project with Expo, look at the following resources:
+Networking becomes overwhelming
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+So I built a tool that I wish existed — something that makes career fairs easier and helps students build real connections.
 
-## Join the community
+🛠 Tech Stack
 
-Join our community of developers creating universal apps.
+Frontend:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+React Native (Expo)
+
+TypeScript
+
+Expo Router
+
+Backend (optional setup):
+
+Firebase (Authentication + Firestore)
+OR
+
+Node.js / FastAPI (future upgrade)
+
+📱 Key Features
+✔ QR Code Scanner
+
+Automatically captures recruiter info without typing.
+
+✔ Notes & Tags
+
+Keep short notes about each conversation:
+
+What they said
+
+What they liked
+
+Skills you discussed
+
+Follow-up expectations
+
+✔ Company Profiles
+
+View all companies you met with in one clean interface.
+
+✔ Follow-Up Manager
+
+Set reminders for emails and next steps.
+
+✔ Offline Support
+
+Works even if the career fair has weak Wi-Fi.
+
+🎥 Demo Video (Add Your Link Here)
+[Watch Demo](https://github.com/your-video-link-goes-here)
+
+🧩 How It Works
+
+Open the app
+
+Scan a QR code or enter info manually
+
+Add quick notes
+
+Review everything in your dashboard
+
+Follow up with one tap
+
+Simple. Organized. Stress-free.
+🤝 Contributions
+
+Open to feedback, suggestions, and improvements.
+If you want to collaborate or try the app, reach out!
+
+🧑‍💻 Author
+
+Misgana Kebede
+CS @ Minnesota State University, Mankato
+LinkedIn: linkedin.com/in/misganakebede
+GitHub: github.com/Misgexx
