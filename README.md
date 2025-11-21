@@ -1,5 +1,4 @@
 FairTrack – Career Fair Companion App
-<img width="1290" height="2796" alt="IMG_5069" src="https://github.com/user-attachments/assets/c3f27f36-e4e0-4d3a-a70c-b7e103b27102" />
 
 FairTrack is a mobile app built to help students stay organized during career fairs. Instead of juggling business cards, messy notes, and scattered follow-ups, FairTrack puts everything in one place. It makes the career fair experience simple, fast, and stress-free.
 
